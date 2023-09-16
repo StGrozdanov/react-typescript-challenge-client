@@ -9,7 +9,7 @@ The assignment is to create a simple search by keyword client, consuming Outdoor
 
 * #### Load More button - utilising the limit and offset server options for increased overall performance.
 
-* #### Implemented a hacky way to view listings even if you are not from USA - Even without VPN you will have the option to view the LA rentals :) 
+* #### Implemented a hacky way to view listings even if you are not from USA - without VPN you will have the option to view the LA rentals. Try the VPN approach as well to view the Load More button. :) 
 
 * #### Basic Test coverage
 
