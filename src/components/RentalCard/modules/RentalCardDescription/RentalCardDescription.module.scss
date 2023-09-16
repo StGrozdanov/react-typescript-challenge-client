@@ -1,0 +1,7 @@
+@use 'src/scss/common/animations' as *;
+
+.description {
+    padding: 0px 1rem;
+    font-weight: bold;
+    @include smoothTransitionAnimation();
+}

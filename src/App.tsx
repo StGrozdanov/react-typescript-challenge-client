@@ -1,8 +1,8 @@
-import TestComponent from "./components/TestComponent";
+import RentalSearch from './components/RentalSearch/RentalSearch';
 
 function App() {
   return (
-    <TestComponent />
+      <RentalSearch />
   );
 }
 

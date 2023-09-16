@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RentalCardDescription Component matches the snapshot 1`] = `
+<div>
+  <p
+    class="description"
+    data-testid="rentalCardDescription"
+  >
+    Sample Rental Name
+  </p>
+</div>
+`;

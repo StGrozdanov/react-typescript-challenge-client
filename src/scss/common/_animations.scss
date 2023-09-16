@@ -1,0 +1,27 @@
+@mixin fadeInUpAnimation($animation-delay: 0s, $animation-durration: 1.5s) {
+    opacity: 0;
+    transform: translateY(20%);
+    animation: fadeInUp $animation-durration ease $animation-delay forwards;
+}
+
+@mixin smoothTransitionAnimation($direction: -100%, $durration: 0.5s) {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX($direction);
+    animation: smoothTransition $durration ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes smoothTransition {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}

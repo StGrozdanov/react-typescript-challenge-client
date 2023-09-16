@@ -1,10 +1,5 @@
 import axios from "axios";
-
-export interface Rental {
-    id: number,
-    name: string,
-    imgURL: string,
-}
+import { Rental } from "../types/interfaces";
 
 interface RentalResponse {
     id: number,
@@ -34,6 +29,19 @@ export const outdoorsyAPI = {
         const response = await outdoorsyApiInstance.request({
           method: "GET",
           url: `rentals?filter[keywords]=${keyword}&page[limit]=${limit}&page[offset]=${offset}`,
+        });
+        
+        const result = response.data;
+        return result.data.length > 0 ? toRental(result.data) : [];
+    },
+
+    searchByKeywordFromLA: async (keyword: string): Promise<Rental[]> => {
+        const response = await outdoorsyApiInstance.request({
+          method: "GET",
+          url: `rentals?filter[keywords]=${keyword}`,
+          headers: {
+            'X-Forwarded-For': '161.123.5.123',
+          },
         });
         
         const result = response.data;

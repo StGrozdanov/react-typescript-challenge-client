@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RentalCard Component Matches snapshot 1`] = `
+<div>
+  <div
+    class="rentalCard"
+    data-testid="rentalCard"
+  >
+    <div
+      class="imageContainer"
+    >
+      <img
+        class="image"
+        data-testid="rentalCardImage"
+        src="https://res.cloudinary.com/outdoorsy/image/upload/v1644599588/p/rentals/226946/images/exzlo5wgf2yiwfjjo7zi.jpg"
+      />
+    </div>
+    <p
+      class="description"
+      data-testid="rentalCardDescription"
+    >
+      Vintage Camper Van 1985 GMC Vandurah
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+@use 'src/scss/common/colors' as *;
+@use 'src/scss/common/buttons' as *;
+
+.noResults {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.keyword {
+    color: $green-accent-color;
+    margin-left: 0.5rem;
+}
+
+.button {
+    @include confirm-btn();
+}

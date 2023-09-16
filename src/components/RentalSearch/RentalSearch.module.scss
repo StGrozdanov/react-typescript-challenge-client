@@ -1,0 +1,23 @@
+@use 'src/scss/common/colors' as *;
+@use 'src/scss/common/buttons' as *;
+
+.search {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid $green-accent-color;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    &:active,
+    &:focus {
+        border-color: $green-accent-color;
+    }
+}
+
+.button {
+    @include confirm-btn();
+    width: 100%;
+    display: inline-block;
+    margin: 1rem auto;
+}
