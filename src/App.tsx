@@ -1,7 +1,8 @@
+import TestComponent from "./components/TestComponent";
 
 function App() {
   return (
-    <h1>Holla</h1>
+    <TestComponent />
   );
 }
 
