@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+<h1 align="center">Outdoorsy Client</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Concept
+The assignment is to create a simple search by keyword client, consuming Outdoorsy REST API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* #### Debounce hook - for reduced client and server load. 
 
-### `npm start`
+* #### Load More button - utilising the limit and offset server options for increased overall performance.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* #### Implemented a hacky way to view listings even if you are not from USA - Even without VPN you will have the option to view the LA rentals :) 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* #### Basic Test coverage
 
-### `npm test`
+* #### Custom scss animations and transitions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* #### Fallbacks for the images
 
-### `npm run build`
+* #### The minimum amount of input validations - to not search by empty space (or couple of them) at least :)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* #### Loading spinner
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Axios - for faster implementation
+* Typescript
+* Jest
+* Sass
 
-### `npm run eject`
+## If i had the time ...
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. I would implement additional input validations 
+2. Additional tests
+3. Request retry mechs and better error handling on failed requests. Sometimes requests fail, leaving us with hanging app if we did not consider it. :)
+4. The "try from LA location solution" will be displayed depending on the user location. If outside of USA - use it only then. Currently it is used in all cases. Do i have to mention the approach refactoring? More intelligent proxy have to be implemented - the IP that I found from the internet method is a temporary solution. And on the first button click - if no results are loaded - the button should be disabled. Currently you can't really understand if the first click worked or not - if you don't get results.
+5. There are no search params displaying in the URL of the page. I cannot send a link with rentals to a friend. And we expect people to rent them :)
+6. I would cleanup that useFetchRentals hook and make it more readable.
+7. There is always something to improve.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to run the project locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. `npm i` or `npm install` if you are not lazy like me.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. `npm start` - to start the app on localhost:3000
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. `npm test` to run the tests
